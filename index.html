@@ -7,8 +7,43 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
     <title>calculator</title>
 </head>
-<body>
-    
+<body ng-controller="CalculatorController">
+    <div class="container">
+        <div class="calculator text-center">
+            <h4>ماشین حساب مهندسی</h4>
+            <input type="text" class="form-control mb-2" ng-model="display" readonly>
+            <div class="row">
+                <button class="btn btn-secondary btn-custom" ng-click="clear()">C</button>
+                <button class="btn btn-secondary btn-custom" ng-click="backspace()">⌫</button>
+                <button class="btn btn-secondary btn-custom" ng-click="append('%')">%</button>
+                <button class="btn btn-primary btn-custom" ng-click="append('/')">÷</button>
+            </div>
+            <div class="row">
+                <button class="btn btn-light btn-custom" ng-click="append('7')">7</button>
+                <button class="btn btn-light btn-custom" ng-click="append('8')">8</button>
+                <button class="btn btn-light btn-custom" ng-click="append('9')">9</button>
+                <button class="btn btn-primary btn-custom" ng-click="append('*')">×</button>
+            </div>
+            <div class="row">
+                <button class="btn btn-light btn-custom" ng-click="append('4')">4</button>
+                <button class="btn btn-light btn-custom" ng-click="append('5')">5</button>
+                <button class="btn btn-light btn-custom" ng-click="append('6')">6</button>
+                <button class="btn btn-primary btn-custom" ng-click="append('-')">−</button>
+            </div>
+            <div class="row">
+                <button class="btn btn-light btn-custom" ng-click="append('1')">1</button>
+                <button class="btn btn-light btn-custom" ng-click="append('2')">2</button>
+                <button class="btn btn-light btn-custom" ng-click="append('3')">3</button>
+                <button class="btn btn-primary btn-custom" ng-click="append('+')">+</button>
+            </div>
+            <div class="row">
+                <button class="btn btn-light btn-custom" ng-click="append('0')">0</button>
+                <button class="btn btn-light btn-custom" ng-click="append('.')">.</button>
+                <button class="btn btn-success btn-custom" ng-click="calculate()">=</button>
+                <button class="btn btn-secondary btn-custom" ng-click="append('Math.sqrt(')">√</button>
+            </div>
+        </div>
+    </div>
 
     <script src="/app.js"></script>
 </body>
