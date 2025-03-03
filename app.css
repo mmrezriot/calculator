@@ -1,0 +1,17 @@
+.calculator {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 15px;
+    background: #e3f2fd;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+.btn-custom {
+    width: 22%;
+    margin: 5px;
+    border-radius: 8px;
+}
+input {
+    text-align: right;
+    border-radius: 8px;
+}
